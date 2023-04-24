@@ -43,7 +43,3 @@ menuBtn.addEventListener('click',function(){
 
 //carousal auto slider
 const controlNext = document.querySelector('.carousel-control-next')
-function slideNext(){
-    co
-}
-setInterval(slideNext(),5000)
