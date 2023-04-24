@@ -115,3 +115,14 @@ a:hover{
         font-size: 1.05rem ;
     }
 }
+
+/* Hero sectiona */
+.carousel{
+    height: 75vh;
+}
+.carousel img{
+    
+}
+.carousel-inner{
+    height: 100%;
+}

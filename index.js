@@ -36,3 +36,14 @@ const navList = document.querySelector('.nav_list')
 menuBtn.addEventListener('click',function(){
     navList.classList.toggle('menu-show')
 })
+
+// navList.addEventListener('mouseout',function(){
+//     navList.classList.toggle('menu-show')
+// })
+
+//carousal auto slider
+const controlNext = document.querySelector('.carousel-control-next')
+function slideNext(){
+    co
+}
+setInterval(slideNext(),5000)
