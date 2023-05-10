@@ -4,6 +4,22 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* Loader */
+.wrapper{
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    transition: opacity 0.25s, visiblity 1s;
+}
+.fade{
+    opacity: 0;
+    visibility: hidden;
+}
+
 nav{
     position: sticky;
     z-index: 3;
@@ -28,6 +44,26 @@ nav{
     font-size: 1.2rem;
     /* font-weight: bold; */
 }
+.nav-item{
+    position: relative;
+}
+.nav-item::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    /* left: 25%;
+    right: 20%; */
+    margin: 4px 0px 0px 0px;
+    color: black;
+    background-color: rgb(220, 176, 0);
+    transition: all 0.3s;
+}
+.nav-item:hover:before{
+    width: 100%;
+}
+
 a{
     text-decoration: none;
     color: rgb(11, 130, 221);
@@ -68,6 +104,29 @@ a:hover{
 }
 .profile-menu{
     height: 150px   ;
+}
+.cart{
+    padding: 0.3rem 0.8rem;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgb(255, 255, 255)
+}
+.cart:hover{
+    border: 1px solid rgb(11, 130, 221);
+}
+
+/* Anchor Login Page */
+.anchor_login{
+    background-color: rgb(11, 130, 221);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.anchor_login:hover{
+    background-color: white;
+    color: rgb(11, 130, 221);
+    border: 1px solid rgb(11, 130, 221);
 }
 @media screen and (max-width:768px) {
     .nav_profile{
@@ -125,10 +184,18 @@ a:hover{
 /* Hero sectiona */
 
 /* Cakes Variety section */
+/* .cake-variety{
+    margin: 2rem 0;
+    background-image: url(https://images.unsplash.com/photo-1498604132755-751b73a22ec9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1142&q=80);
+} */
 .cake-item{
-    /* border: 2px solid rgb(11, 130, 221); */
+    transform: scale(0.9);
+    border: 2px solid rgb(11, 130, 221);
     border-radius: 10px;
     padding: 1rem;
+
+    background-color: rgba(255, 255, 255, 0.686);
+    transition: 0.25s;
 }
 .cake-item a{
     display: block;
@@ -140,6 +207,10 @@ a:hover{
 .cake-item img{
     border-radius: 5px;
 }
+.cake-item:hover{
+    transform: scale(.83);
+}
+
 
 @media screen and (max-width:576px) {
     .cake-item a{

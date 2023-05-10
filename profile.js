@@ -1,16 +1,3 @@
-// Loader
-const fade = () => {
-    const wrapper = document.querySelector(".wrapper");
-    wrapper.classList.add("fade")
-}
-window.addEventListener('load',fade);
-
-// const navItem = document.querySelector('.nav-item')
-// NavHover = () => {
-//     navItem.classList.add('.nav-item-hover')
-// }
-// navItem.addEventListener('mouseover',NavHover)
-// navItem.addEventListener('mouseout')
 // Category Menu drop Down
 const category = document.querySelector(".nav-dropdown")
 const categoryMenu = document.querySelector(".category-content")
@@ -26,6 +13,21 @@ categoryMenu.addEventListener('mouseleave',function(){
     categoryMenu.style.display="none"
 })
 
+// profile menu drop down
+const profile = document.querySelector(".profile-dropdown   ")
+const profileMenu = document.querySelector(".profile-menu")
+
+profile.addEventListener('mouseover',function(){
+    profileMenu.style.display="flex";
+})
+profile.addEventListener('mouseout',function(){
+    profileMenu.style.display="none";
+})
+
+profileMenu.addEventListener('mouseleave',function(){
+    profileMenu.style.display="none"
+})
+
 //Menu btn
 const menuBtn = document.querySelector(".menu_btn")
 
@@ -34,3 +36,10 @@ const navList = document.querySelector('.nav_list')
 menuBtn.addEventListener('click',function(){
     navList.classList.toggle('menu-show')
 })
+
+// navList.addEventListener('mouseout',function(){
+//     navList.classList.toggle('menu-show')
+// })
+
+//carousal auto slider
+const controlNext = document.querySelector('.carousel-control-next')
